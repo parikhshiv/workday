@@ -46,13 +46,15 @@ function setupPage(resp) {
 
 	backButton.addEventListener('click', (e) => {
 		e.preventDefault();
-		videoIdx = (videoIdx - 1) % videos.length;
+		videoIdx = (videos.length + videoIdx - 1) % videos.length;
+		console.log(videoIdx);
 		updateIframe();
 	});
 
 	skipButton.addEventListener('click', (e) => {
 		e.preventDefault();
 		videoIdx = (videoIdx + 1) % videos.length;
+		console.log(videoIdx);
 		updateIframe();
 	});
 
